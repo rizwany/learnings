@@ -44,3 +44,10 @@ AI related learning material in Urdu.
 - [ai_urdu_module8/transfer-learning-hands-on.html](ai_urdu_module8/transfer-learning-hands-on.html)
 - [ai_urdu_module8/future-trends.html](ai_urdu_module8/future-trends.html)
 - [ai_urdu_module8/final-quiz.html](ai_urdu_module8/final-quiz.html)
+
+## Other Topics
+
+- [Phishing and Cyber Security](Phishing_Security_Presentation.html)
+- [Module 6: Effective Prompt Writing](ai_urdu_module6/index.html)
+- [Module 7: NLP and Transformer Models](ai_urdu_module7/index.html)
+- [Module 8: AI Language Models and Foundation Models](ai_urdu_module8/index.html)
