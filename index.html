@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI learning in urdu</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8f4;
+      --surface: #ffffff;
+      --ink: #18221d;
+      --muted: #66746c;
+      --line: #dce5df;
+      --accent: #0f766e;
+      --accent-dark: #115e59;
+      --warm: #eab308;
+      --shadow: 0 18px 48px rgba(24, 34, 29, 0.11);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Segoe UI", Tahoma, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(234, 179, 8, 0.18), transparent 34rem),
+        linear-gradient(135deg, #f9faf7 0%, var(--bg) 48%, #eef6f4 100%);
+      color: var(--ink);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 44px 0;
+    }
+
+    .hero {
+      display: grid;
+      gap: 18px;
+      padding: clamp(28px, 6vw, 64px) 0 28px;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      padding: 5px 12px;
+      border: 1px solid rgba(15, 118, 110, 0.24);
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--accent-dark);
+      font: 700 0.88rem/1.5 "Segoe UI", Tahoma, Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      font-size: clamp(2.1rem, 7vw, 5rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.6vw, 1.2rem);
+    }
+
+    .module-list {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .module-card {
+      position: relative;
+      display: grid;
+      min-height: 210px;
+      padding: 20px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgba(24, 34, 29, 0.07);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .module-card:hover,
+    .module-card:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(15, 118, 110, 0.48);
+      box-shadow: var(--shadow);
+      outline: none;
+    }
+
+    .module-card::before {
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--accent);
+    }
+
+    .module-number {
+      display: inline-grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fef3c7;
+      color: #854d0e;
+      font: 800 0.95rem/1 "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    .module-title {
+      margin: 18px 0 8px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-weight: 800;
+    }
+
+    .module-path {
+      align-self: end;
+      margin: 14px 0 0;
+      color: var(--accent-dark);
+      direction: ltr;
+      text-align: left;
+      font: 700 0.9rem/1.5 Consolas, "Courier New", monospace;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .module-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 22px, 1120px);
+        padding: 24px 0;
+      }
+
+      .hero {
+        padding-top: 26px;
+      }
+
+      .module-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .module-card {
+        min-height: 176px;
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="page-title">
+      <span class="eyebrow">Urdu AI Course</span>
+      <h1 id="page-title">AI learning in urdu</h1>
+      <p class="intro">
+        نیچے تمام modules کے index pages کی فہرست ہے۔ کسی بھی module کو کھولنے کے لیے اس کے card پر کلک کریں۔
+      </p>
+    </section>
+
+    <ul class="module-list" aria-label="AI learning modules">
+      <li>
+        <a class="module-card" href="ai_urdu_module1/index.html">
+          <span class="module-number">01</span>
+          <span class="module-title">مصنوعی ذہانت کا تعارف</span>
+          <span class="module-path">ai_urdu_module1/index.html</span>
+        </a>
+      </li>
+      <li>
+        <a class="module-card" href="ai_urdu_module2/index.html">
+          <span class="module-number">02</span>
+          <span class="module-title">روزمرہ زندگی اور کام میں اے آئی کا استعمال</span>
+          <span class="module-path">ai_urdu_module2/index.html</span>
+        </a>
+      </li>
+      <li>
+        <a class="module-card" href="ai_urdu_module3/index.html">
+          <span class="module-number">03</span>
+          <span class="module-title">Responsible AI Use - ذمہ دارانہ اے آئی استعمال</span>
+          <span class="module-path">ai_urdu_module3/index.html</span>
+        </a>
+      </li>
+      <li>
+        <a class="module-card" href="ai_urdu_module4/index.html">
+          <span class="module-number">04</span>
+          <span class="module-title">AI کیسے کام کرتی ہے؟</span>
+          <span class="module-path">ai_urdu_module4/index.html</span>
+        </a>
+      </li>
+      <li>
+        <a class="module-card" href="ai_urdu_module5/index.html">
+          <span class="module-number">05</span>
+          <span class="module-title">AI کے advanced تصورات آسان الفاظ میں</span>
+          <span class="module-path">ai_urdu_module5/index.html</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>
+      AI Learning Urdu modules directory
+    </footer>
+  </main>
+</body>
+</html>
