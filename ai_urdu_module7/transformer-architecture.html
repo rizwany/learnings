@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>44 - Transformer Models کی ساخت</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+<style id="common-site-nav-style">
+  .common-site-nav { position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(15, 23, 42, 0.12); background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(14px); font-family: "Segoe UI", Tahoma, Arial, sans-serif; direction: ltr; }
+  .common-site-nav__inner { width: min(1180px, calc(100% - 24px)); min-height: 48px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; position: relative; }
+  .common-site-nav a { color: inherit; text-decoration: none; }
+  .common-site-nav__brand { flex: 0 0 auto; display: inline-flex; align-items: center; min-height: 32px; padding: 6px 11px; border-radius: 8px; background: #0f766e; color: #fff; font-size: 0.9rem; line-height: 1.2; font-weight: 800; white-space: nowrap; }
+  .common-site-nav__menu { position: relative; flex: 0 0 auto; }
+  .common-site-nav__menu summary { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 12px; border: 1px solid rgba(15, 118, 110, 0.28); border-radius: 8px; background: rgba(15, 118, 110, 0.08); color: #12312d; cursor: pointer; font-size: 0.9rem; font-weight: 800; line-height: 1.2; list-style: none; white-space: nowrap; }
+  .common-site-nav__menu summary::-webkit-details-marker { display: none; }
+  .common-site-nav__menu summary::after { content: ""; width: 0.42rem; height: 0.42rem; margin-left: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-1px); }
+  .common-site-nav__menu[open] summary::after { transform: rotate(225deg) translate(-2px, -1px); }
+  .common-site-nav__panel { position: absolute; top: calc(100% + 8px); right: 0; width: min(760px, calc(100vw - 24px)); max-height: min(72vh, 620px); overflow: auto; padding: 12px; border: 1px solid rgba(15, 23, 42, 0.14); border-radius: 8px; background: #fff; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18); }
+  .common-site-nav__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .common-site-nav__panel a { display: block; padding: 8px 10px; border-radius: 7px; color: #12312d; font-size: 0.88rem; font-weight: 700; line-height: 1.25; }
+  .common-site-nav__panel a:hover, .common-site-nav__panel a:focus-visible { background: rgba(15, 118, 110, 0.1); outline: none; }
+  @media (max-width: 640px) { .common-site-nav__inner { width: calc(100% - 16px); min-height: 44px; } .common-site-nav__brand, .common-site-nav__menu summary { min-height: 30px; padding: 5px 9px; font-size: 0.82rem; } .common-site-nav__panel { position: fixed; top: 52px; left: 8px; right: 8px; width: auto; max-height: calc(100vh - 68px); } .common-site-nav__grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="common-site-nav" aria-label="Common site navigation">
+  <div class="common-site-nav__inner">
+    <a class="common-site-nav__brand" href="../index.html">AI Urdu</a>
+    <details class="common-site-nav__menu">
+      <summary>Pages</summary>
+      <div class="common-site-nav__panel">
+        <div class="common-site-nav__grid">
+      <a href="../index.html">Home</a>
+      <a href="../Phishing_Security_Presentation.html">Security Presentation</a>
+      <a href="../ai_urdu_module1/index.html">Module 1 Index</a>
+      <a href="../ai_urdu_module1/topics/01-what-is-ai.html">M1: What is AI?</a>
+      <a href="../ai_urdu_module1/topics/02-ai-in-everyday-life.html">M1: AI in Everyday Life</a>
+      <a href="../ai_urdu_module1/topics/03-ai-automation-software.html">M1: AI, Automation, Software</a>
+      <a href="../ai_urdu_module1/topics/04-types-of-ai.html">M1: Types of AI</a>
+      <a href="../ai_urdu_module1/topics/05-how-ai-learns.html">M1: How AI Learns</a>
+      <a href="../ai_urdu_module1/topics/06-machine-learning.html">M1: Machine Learning</a>
+      <a href="../ai_urdu_module1/topics/07-generative-ai.html">M1: Generative AI</a>
+      <a href="../ai_urdu_module1/topics/08-popular-ai-tools.html">M1: Popular AI Tools</a>
+      <a href="../ai_urdu_module2/index.html">Module 2 Index</a>
+      <a href="../ai_urdu_module2/topics/09-how-to-use-ai-effectively.html">M2: Use AI Effectively</a>
+      <a href="../ai_urdu_module2/topics/10-prompting-basics.html">M2: Prompting Basics</a>
+      <a href="../ai_urdu_module2/topics/11-ai-for-productivity.html">M2: AI for Productivity</a>
+      <a href="../ai_urdu_module2/topics/12-ai-for-students-education.html">M2: Students and Education</a>
+      <a href="../ai_urdu_module2/topics/13-ai-for-business.html">M2: AI for Business</a>
+      <a href="../ai_urdu_module2/topics/14-ai-for-marketing-content.html">M2: Marketing and Content</a>
+      <a href="../ai_urdu_module2/topics/15-ai-for-creativity.html">M2: Creativity</a>
+      <a href="../ai_urdu_module2/topics/16-ai-for-communication.html">M2: Communication</a>
+      <a href="../ai_urdu_module3/index.html">Module 3 Index</a>
+      <a href="../ai_urdu_module3/topics/17-ai-accuracy-mistakes.html">M3: Accuracy and Mistakes</a>
+      <a href="../ai_urdu_module3/topics/18-ai-bias.html">M3: AI Bias</a>
+      <a href="../ai_urdu_module3/topics/19-ai-privacy-data-safety.html">M3: Privacy and Data Safety</a>
+      <a href="../ai_urdu_module3/topics/20-ai-ethics.html">M3: AI Ethics</a>
+      <a href="../ai_urdu_module3/topics/21-ai-copyright.html">M3: AI and Copyright</a>
+      <a href="../ai_urdu_module3/topics/22-ai-workplace.html">M3: Workplace AI</a>
+      <a href="../ai_urdu_module3/topics/23-ai-human-skills.html">M3: Human Skills</a>
+      <a href="../ai_urdu_module4/index.html">Module 4 Index</a>
+      <a href="../ai_urdu_module4/data-and-ai.html">M4: Data and AI</a>
+      <a href="../ai_urdu_module4/algorithms-simple.html">M4: Algorithms</a>
+      <a href="../ai_urdu_module4/predictive-ai.html">M4: Predictive AI</a>
+      <a href="../ai_urdu_module4/human-language-ai.html">M4: Human Language AI</a>
+      <a href="../ai_urdu_module4/computer-vision.html">M4: Computer Vision</a>
+      <a href="../ai_urdu_module4/ai-search-research.html">M4: AI Search and Research</a>
+      <a href="../ai_urdu_module4/ai-agents.html">M4: AI Agents</a>
+      <a href="../ai_urdu_module5/index.html">Module 5 Index</a>
+      <a href="../ai_urdu_module5/large-language-models.html">M5: Large Language Models</a>
+      <a href="../ai_urdu_module5/training-ai-models.html">M5: Training AI Models</a>
+      <a href="../ai_urdu_module5/ai-limitations.html">M5: AI Limitations</a>
+      <a href="../ai_urdu_module5/ai-governance.html">M5: AI Governance</a>
+      <a href="../ai_urdu_module5/future-of-ai.html">M5: Future of AI</a>
+      <a href="../ai_urdu_module5/keep-learning-ai.html">M5: Keep Learning AI</a>
+      <a href="../ai_urdu_module6/index.html">Module 6 Index</a>
+      <a href="../ai_urdu_module6/prompt-basics.html">M6: Prompt Basics</a>
+      <a href="../ai_urdu_module6/prompt-structure.html">M6: Prompt Structure</a>
+      <a href="../ai_urdu_module6/use-case-prompts.html">M6: Use Case Prompts</a>
+      <a href="../ai_urdu_module6/improve-prompts.html">M6: Improve Prompts</a>
+      <a href="../ai_urdu_module6/dos-donts.html">M6: Do and Don't</a>
+      <a href="../ai_urdu_module6/prompt-checklist.html">M6: Prompt Checklist</a>
+      <a href="../ai_urdu_module7/index.html">Module 7 Index</a>
+      <a href="../ai_urdu_module7/nlp-fundamentals.html">M7: NLP Fundamentals</a>
+      <a href="../ai_urdu_module7/transformer-architecture.html">M7: Transformer Architecture</a>
+      <a href="../ai_urdu_module7/real-world-nlp-tasks.html">M7: Real-world NLP Tasks</a>
+      <a href="../ai_urdu_module7/final-quiz.html">M7: Final Quiz</a>
+        </div>
+      </div>
+    </details>
+  </div>
+</nav>
+<header class="topbar"><div class="container nav"><a class="brand" href="index.html"><span class="brand-badge">AI</span><span>NLP اور Transformer Models</span></a><nav class="navlinks"><a href="index.html">مرکزی صفحہ</a><a href="#quiz">مختصر سوالات</a></nav></div></header>
+<div class="progress"><span></span></div>
+<main class="container topic-layout">
+  <aside class="sidebar"><strong>اس صفحے میں</strong><a href="#s1">Encoder-decoder</a><a href="#s2">Self-attention</a><a href="#s3">Multi-head Attention</a><a href="#s4">Feedforward Neural Networks</a><a href="#s5">Sequence-to-sequence</a><a href="#quiz">مختصر سوالات</a></aside>
+  <article class="content">
+    <header class="topic-head"><div><span class="eyebrow">Topic 44</span><h1>Explore the Architecture of Transformer Models</h1><p class="lead">Transformer model زبان کے الفاظ کے درمیان تعلقات کو بہت مؤثر طریقے سے سمجھتا ہے۔</p><div class="info-box"><p>اس page کا مقصد deep mathematics نہیں، بلکہ structure کی آسان سمجھ دینا ہے تاکہ آپ جان سکیں کہ جدید LLMs کس خیال پر کام کرتے ہیں۔</p></div></div><div class="topic-visual"><img src="assets/images/nlp-transformer.svg" alt="Transformer architecture"></div></header>
+    <section class="section" id="s1"><h2>Transformer-based Encoder-decoder Models</h2><p>Encoder input کو سمجھنے والا حصہ ہے۔ یہ sentence یا text کو پڑھ کر اس کے معنی، context اور تعلقات کی نمائندگی بناتا ہے۔ Decoder output بنانے والا حصہ ہے۔ یہ اسی سمجھ کی بنیاد پر translation، answer، summary یا نیا text بناتا ہے۔</p><p>مثال کے طور پر translation میں Encoder اردو جملہ سمجھتا ہے، Decoder اسے دوسری زبان میں جواب کی شکل دیتا ہے۔</p></section>
+    <section class="section" id="s2"><h2>Self-attention</h2><p>Self-attention Transformer کا بہت اہم حصہ ہے۔ اس سے model یہ دیکھتا ہے کہ ایک sentence میں کون سا لفظ دوسرے لفظ کے لیے کتنا اہم ہے۔</p><div class="example-box"><p>جملہ: "احمد نے علی کو کتاب دی کیونکہ وہ استاد تھا۔" یہاں "وہ" کس کی طرف اشارہ کرتا ہے؟ Self-attention model کو الفاظ کے تعلقات دیکھنے میں مدد دیتا ہے تاکہ context بہتر سمجھ آئے۔</p></div></section>
+    <section class="section" id="s3"><h2>Multi-head Attention</h2><p>Multi-head Attention کا مطلب ہے کہ model ایک ہی وقت میں مختلف زاویوں سے تعلقات دیکھتا ہے۔ ایک head grammar دیکھ سکتا ہے، دوسرا meaning، تیسرا دور کے الفاظ کا تعلق، اور چوتھا sentence کا مقصد۔</p><p>یہ ایسے ہے جیسے ایک team ایک ہی text کو مختلف زاویوں سے پڑھ رہی ہو، پھر سب کی سمجھ کو ملا کر بہتر نتیجہ بنایا جائے۔</p></section>
+    <section class="section" id="s4"><h2>Feedforward Neural Networks</h2><p>Attention کے بعد Feedforward Neural Networks information کو مزید process کرتے ہیں۔ آسان الفاظ میں یہ حصہ model کی اندرونی سمجھ کو refine کرتا ہے تاکہ اگلے step کے لیے بہتر representation بنے۔</p><p>یہ ہر token پر کام کر کے learned patterns کو مزید مضبوط کرتا ہے۔</p></section>
+    <section class="section" id="s5"><h2>Sequence-to-sequence Model اور Applications</h2><p>Sequence-to-sequence model ایک sequence لیتا ہے اور دوسری sequence بناتا ہے۔ مثالیں: translation، summary، question answering، grammar correction، chatbot reply، code explanation، اور text rewriting۔</p><div class="flow"><div>Input sequence</div><div>Encoder</div><div>Decoder</div><div>Output sequence</div></div></section>
+    <section class="key-box"><h2>اہم نکات</h2><ul><li>Encoder input کو سمجھتا ہے، Decoder output بناتا ہے۔</li><li>Self-attention الفاظ کے باہمی تعلقات دیکھتا ہے۔</li><li>Multi-head Attention کئی زاویوں سے context سمجھتا ہے۔</li><li>Sequence-to-sequence translation اور summary جیسے کاموں میں مفید ہے۔</li></ul></section>
+    <section class="quiz-box" id="quiz"><h2>Quick Quiz</h2><div class="quiz-question" data-correct="0"><h3>سوال 1: Encoder کا بنیادی کام کیا ہے؟</h3><div class="quiz-options"><button class="option" type="button">input کو سمجھنا</button><button class="option" type="button">screen روشن کرنا</button><button class="option" type="button">file delete کرنا</button></div><div class="feedback"></div></div><div class="quiz-question" data-correct="2"><h3>سوال 2: Self-attention کس چیز میں مدد دیتا ہے؟</h3><div class="quiz-options"><button class="option" type="button">صرف font بدلنے میں</button><button class="option" type="button">internet بند کرنے میں</button><button class="option" type="button">الفاظ کے تعلقات سمجھنے میں</button></div><div class="feedback"></div></div><div class="quiz-question" data-correct="1"><h3>سوال 3: Multi-head Attention کا فائدہ کیا ہے؟</h3><div class="quiz-options"><button class="option" type="button">صرف ایک زاویہ دیکھنا</button><button class="option" type="button">text کو کئی زاویوں سے سمجھنا</button><button class="option" type="button">جواب روک دینا</button></div><div class="feedback"></div></div></section>
+    <div class="nextprev"><a class="btn secondary" href="nlp-fundamentals.html">پچھلا موضوع</a><a class="btn" href="real-world-nlp-tasks.html">اگلا موضوع</a></div>
+  </article>
+</main>
+<footer class="footer"><div class="container">Transformer architecture جدید زبان models کی بنیاد ہے۔</div></footer><script src="assets/js/script.js"></script>
+</body>
+</html>
