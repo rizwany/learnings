@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 8 - AI Language Models and Foundation Models</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+<style id="common-site-nav-style">
+  .common-site-nav { position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(15, 23, 42, 0.12); background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(14px); font-family: "Segoe UI", Tahoma, Arial, sans-serif; direction: ltr; }
+  .common-site-nav__inner { width: min(1180px, calc(100% - 24px)); min-height: 48px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; position: relative; }
+  .common-site-nav a { color: inherit; text-decoration: none; }
+  .common-site-nav__brand { flex: 0 0 auto; display: inline-flex; align-items: center; min-height: 32px; padding: 6px 11px; border-radius: 8px; background: #0f766e; color: #fff; font-size: 0.9rem; line-height: 1.2; font-weight: 800; white-space: nowrap; }
+  .common-site-nav__menu { position: relative; flex: 0 0 auto; }
+  .common-site-nav__menu summary { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 12px; border: 1px solid rgba(15, 118, 110, 0.28); border-radius: 8px; background: rgba(15, 118, 110, 0.08); color: #12312d; cursor: pointer; font-size: 0.9rem; font-weight: 800; line-height: 1.2; list-style: none; white-space: nowrap; }
+  .common-site-nav__menu summary::-webkit-details-marker { display: none; }
+  .common-site-nav__menu summary::after { content: ""; width: 0.42rem; height: 0.42rem; margin-left: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-1px); }
+  .common-site-nav__menu[open] summary::after { transform: rotate(225deg) translate(-2px, -1px); }
+  .common-site-nav__panel { position: absolute; top: calc(100% + 8px); right: 0; width: min(760px, calc(100vw - 24px)); max-height: min(72vh, 620px); overflow: auto; padding: 12px; border: 1px solid rgba(15, 23, 42, 0.14); border-radius: 8px; background: #fff; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18); }
+  .common-site-nav__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .common-site-nav__panel a { display: block; padding: 8px 10px; border-radius: 7px; color: #12312d; font-size: 0.88rem; font-weight: 700; line-height: 1.25; }
+  .common-site-nav__panel a:hover, .common-site-nav__panel a:focus-visible { background: rgba(15, 118, 110, 0.1); outline: none; }
+  @media (max-width: 640px) { .common-site-nav__inner { width: calc(100% - 16px); min-height: 44px; } .common-site-nav__brand, .common-site-nav__menu summary { min-height: 30px; padding: 5px 9px; font-size: 0.82rem; } .common-site-nav__panel { position: fixed; top: 52px; left: 8px; right: 8px; width: auto; max-height: calc(100vh - 68px); } .common-site-nav__grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="common-site-nav" aria-label="Common site navigation">
+  <div class="common-site-nav__inner">
+    <a class="common-site-nav__brand" href="../index.html">AI Urdu</a>
+    <details class="common-site-nav__menu">
+      <summary>Pages</summary>
+      <div class="common-site-nav__panel">
+        <div class="common-site-nav__grid">
+          <a href="../index.html">Home</a>
+          <a href="../ai_urdu_module7/index.html">Module 7 Index</a>
+          <a href="../ai_urdu_module8/index.html">Module 8 Index</a>
+          <a href="../ai_urdu_module8/foundation-models.html">M8: Foundation Models</a>
+          <a href="../ai_urdu_module8/core-architectures.html">M8: Core Architectures</a>
+          <a href="../ai_urdu_module8/multimodal-systems.html">M8: Multimodal Systems</a>
+          <a href="../ai_urdu_module8/ai-agents.html">M8: AI Agents</a>
+          <a href="../ai_urdu_module8/transfer-learning-hands-on.html">M8: Transfer Learning</a>
+          <a href="../ai_urdu_module8/future-trends.html">M8: Future Trends</a>
+          <a href="../ai_urdu_module8/final-quiz.html">M8: Final Quiz</a>
+        </div>
+      </div>
+    </details>
+  </div>
+</nav>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-badge">AI</span><span>Language Models اور Foundation Models</span></a>
+    <nav class="navlinks"><a href="index.html">مرکزی صفحہ</a><a href="#topics">موضوعات</a><a href="final-quiz.html#quiz">آخری کوئز</a></nav>
+  </div>
+</header>
+<div class="progress"><span></span></div>
+
+<main>
+  <section class="hero">
+    <div class="container hero-card">
+      <div>
+        <span class="eyebrow">Module 8</span>
+        <h1>AI Language Models and Foundation Models</h1>
+        <p class="lead">اس module میں آپ سیکھیں گے کہ بڑے زبانی model صرف اگلا لفظ نہیں چنتے، بلکہ وسیع data سے عمومی patterns سیکھ کر مختلف کاموں میں مدد دیتے ہیں۔</p>
+        <p>ہم Foundation Model، Transformer، Encoder، Decoder، Multimodal نظام، AI Agent، Memory، Tools، Transfer Learning اور SLMs کو آسان اردو میں سمجھیں گے۔ English صرف وہاں رکھی گئی ہے جہاں technical لفظ اپنی اصل شکل میں پہچاننا ضروری ہے۔</p>
+        <a class="btn" href="#topics">موضوعات شروع کریں</a>
+      </div>
+      <div class="hero-img"><img src="assets/images/foundation-models.svg" alt="Foundation models diagram"></div>
+    </div>
+  </section>
+
+  <section class="container" id="topics">
+    <span class="eyebrow">Topics 47 to 53</span>
+    <h2>اس module کے حصے</h2>
+    <p class="lead">ہر حصہ ایک بنیادی تصور، آسان مثال، عملی احتیاط، اور آخر میں مختصر سوالات کے ساتھ بنایا گیا ہے۔</p>
+    <div class="grid">
+      <a class="card" href="foundation-models.html"><div class="topic-num">47</div><h2>Foundation Models کی تعریف</h2><p>کون سی چیز model کو foundational بناتی ہے، scale کیا بدلتا ہے، emergence کیا ہے، اور Transfer Learning کیوں اہم ہے۔</p><span class="btn">یہ موضوع پڑھیں</span></a>
+      <a class="card" href="core-architectures.html"><div class="topic-num">48</div><h2>Encoder، Decoder اور Transformer</h2><p>Transformer blueprint، BERT، GPT، Llama، T5 اور BART کے بنیادی فرق آسان الفاظ میں۔</p><span class="btn">یہ موضوع پڑھیں</span></a>
+      <a class="card" href="multimodal-systems.html"><div class="topic-num">49</div><h2>Multimodal Systems کا ارتقا</h2><p>Text سے آگے image، audio، video اور documents کو سمجھنے والے systems کیسے بنتے ہیں۔</p><span class="btn">یہ موضوع پڑھیں</span></a>
+      <a class="card" href="ai-agents.html"><div class="topic-num">50</div><h2>AI Agents: Tools، Memory، Autonomy</h2><p>سادہ chatbot کی حد، agent framework، tool use، memory، autonomy، risks اور security۔</p><span class="btn">یہ موضوع پڑھیں</span></a>
+      <a class="card" href="transfer-learning-hands-on.html"><div class="topic-num">51</div><h2>Hands-on: Applied Transfer Learning</h2><p>ایک practical scenario میں پہلے سے trained model کو نئے کام کے لیے استعمال کرنے کی strategy۔</p><span class="btn">یہ موضوع پڑھیں</span></a>
+      <a class="card" href="future-trends.html"><div class="topic-num">52</div><h2>Future Trends and Conclusion</h2><p>Text سے action تک سفر، SLMs کا rise، اور future learning کے لیے final thoughts۔</p><span class="btn">یہ موضوع پڑھیں</span></a>
+      <a class="card" href="final-quiz.html"><div class="topic-num">53</div><h2>Module Quiz</h2><p>پورے module کی revision، checklist، اور final quiz کے ذریعے اپنی سمجھ check کریں۔</p><span class="btn">Quiz شروع کریں</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><div class="container">یہ مواد learning کے لیے ہے۔ اہم technical فیصلوں میں مستند documentation، testing، privacy اور security review ضروری ہیں۔</div></footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

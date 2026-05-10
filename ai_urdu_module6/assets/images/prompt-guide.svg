@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt guide illustration</title>
+  <desc id="desc">A simple visual showing a prompt turning into a clear result.</desc>
+  <rect width="520" height="360" rx="28" fill="#eaf7f5"/>
+  <rect x="54" y="58" width="190" height="244" rx="18" fill="#ffffff" stroke="#b9d8d2" stroke-width="3"/>
+  <rect x="276" y="58" width="190" height="244" rx="18" fill="#ffffff" stroke="#b9d8d2" stroke-width="3"/>
+  <rect x="82" y="92" width="112" height="14" rx="7" fill="#0f766e"/>
+  <rect x="82" y="128" width="132" height="12" rx="6" fill="#d8e5df"/>
+  <rect x="82" y="158" width="94" height="12" rx="6" fill="#d8e5df"/>
+  <rect x="82" y="188" width="124" height="12" rx="6" fill="#d8e5df"/>
+  <rect x="82" y="218" width="84" height="12" rx="6" fill="#d8e5df"/>
+  <circle cx="149" cy="266" r="20" fill="#b7791f"/>
+  <path d="M244 180h50" stroke="#0f766e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M282 160l25 20-25 20" fill="none" stroke="#0f766e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="306" y="94" width="130" height="14" rx="7" fill="#0f766e"/>
+  <path d="M322 145h98M322 177h70M322 209h92" stroke="#b7791f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M320 260l22 20 56-66" fill="none" stroke="#177245" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

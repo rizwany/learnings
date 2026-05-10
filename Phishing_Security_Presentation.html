@@ -607,150 +607,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PD85WRBD');</script>
   <!-- End Google Tag Manager -->
 <style id="common-site-nav-style">
-  .common-site-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
-    background: rgba(15, 23, 42, 0.88);
-    backdrop-filter: blur(14px);
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    direction: ltr;
-  }
-
-  .common-site-nav__inner {
-    width: min(1100px, calc(100% - 24px));
-    min-height: 48px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    position: relative;
-  }
-
-  .common-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .common-site-nav__brand {
-    display: inline-flex;
-    align-items: center;
-    min-height: 32px;
-    padding: 6px 11px;
-    border-radius: 8px;
-    background: #f59e0b;
-    color: #0f172a;
-    font-size: 0.9rem;
-    line-height: 1.2;
-    font-weight: 800;
-    white-space: nowrap;
-  }
-
-  .common-site-nav__menu {
-    position: relative;
-  }
-
-  .common-site-nav__menu summary {
-    display: inline-flex;
-    align-items: center;
-    min-height: 32px;
-    padding: 6px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.12);
-    color: #fff;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 800;
-    line-height: 1.2;
-    list-style: none;
-    white-space: nowrap;
-  }
-
-  .common-site-nav__menu summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .common-site-nav__menu summary::after {
-    content: "";
-    width: 0.42rem;
-    height: 0.42rem;
-    margin-left: 8px;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: rotate(45deg) translateY(-1px);
-  }
-
-  .common-site-nav__menu[open] summary::after {
-    transform: rotate(225deg) translate(-2px, -1px);
-  }
-
-  .common-site-nav__panel {
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;
-    width: min(760px, calc(100vw - 24px));
-    max-height: min(72vh, 620px);
-    overflow: auto;
-    padding: 12px;
-    border: 1px solid rgba(15, 23, 42, 0.14);
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
-  }
-
-  .common-site-nav__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .common-site-nav__panel a {
-    display: block;
-    padding: 8px 10px;
-    border-radius: 7px;
-    color: #12312d;
-    font-size: 0.88rem;
-    font-weight: 700;
-    line-height: 1.25;
-  }
-
-  .common-site-nav__panel a:hover,
-  .common-site-nav__panel a:focus-visible {
-    background: rgba(30, 64, 175, 0.1);
-    outline: none;
-  }
-
-  @media (max-width: 640px) {
-    .common-site-nav__inner {
-      width: calc(100% - 16px);
-      min-height: 44px;
-    }
-
-    .common-site-nav__brand,
-    .common-site-nav__menu summary {
-      min-height: 30px;
-      padding: 5px 9px;
-      font-size: 0.82rem;
-    }
-
-    .common-site-nav__panel {
-      position: fixed;
-      top: 52px;
-      left: 8px;
-      right: 8px;
-      width: auto;
-      max-height: calc(100vh - 68px);
-    }
-
-    .common-site-nav__grid {
-      grid-template-columns: 1fr;
-    }
-  }
+  .common-site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.24); background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(14px); font-family: "Segoe UI", Tahoma, Arial, sans-serif; direction: ltr; }
+  .common-site-nav__inner { width: min(1100px, calc(100% - 24px)); min-height: 48px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; position: relative; }
+  .common-site-nav a { color: inherit; text-decoration: none; }
+  .common-site-nav__brand { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 11px; border-radius: 8px; background: #f59e0b; color: #0f172a; font-size: 0.9rem; line-height: 1.2; font-weight: 800; white-space: nowrap; }
+  .common-site-nav__menu { position: relative; }
+  .common-site-nav__menu summary { display: inline-flex; align-items: center; min-height: 32px; padding: 6px 12px; border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 8px; background: rgba(255, 255, 255, 0.12); color: #fff; cursor: pointer; font-size: 0.9rem; font-weight: 800; line-height: 1.2; list-style: none; white-space: nowrap; }
+  .common-site-nav__menu summary::-webkit-details-marker { display: none; }
+  .common-site-nav__menu summary::after { content: ""; width: 0.42rem; height: 0.42rem; margin-left: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-1px); }
+  .common-site-nav__menu[open] summary::after { transform: rotate(225deg) translate(-2px, -1px); }
+  .common-site-nav__panel { position: absolute; top: calc(100% + 8px); right: 0; width: min(760px, calc(100vw - 24px)); max-height: min(72vh, 620px); overflow: auto; padding: 12px; border: 1px solid rgba(15, 23, 42, 0.14); border-radius: 8px; background: #fff; box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22); }
+  .common-site-nav__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .common-site-nav__panel a { display: block; padding: 8px 10px; border-radius: 7px; color: #12312d; font-size: 0.88rem; font-weight: 700; line-height: 1.25; }
+  .common-site-nav__panel a:hover, .common-site-nav__panel a:focus-visible { background: rgba(30, 64, 175, 0.1); outline: none; }
+  @media (max-width: 640px) { .common-site-nav__inner { width: calc(100% - 16px); min-height: 44px; } .common-site-nav__brand, .common-site-nav__menu summary { min-height: 30px; padding: 5px 9px; font-size: 0.82rem; } .common-site-nav__panel { position: fixed; top: 52px; left: 8px; right: 8px; width: auto; max-height: calc(100vh - 68px); } .common-site-nav__grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -804,6 +674,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="ai_urdu_module5/ai-governance.html">M5: AI Governance</a>
       <a href="ai_urdu_module5/future-of-ai.html">M5: Future of AI</a>
       <a href="ai_urdu_module5/keep-learning-ai.html">M5: Keep Learning AI</a>
+      <a href="ai_urdu_module6/index.html">Module 6 Index</a>
+      <a href="ai_urdu_module6/prompt-basics.html">M6: Prompt Basics</a>
+      <a href="ai_urdu_module6/prompt-structure.html">M6: Prompt Structure</a>
+      <a href="ai_urdu_module6/use-case-prompts.html">M6: Use Case Prompts</a>
+      <a href="ai_urdu_module6/improve-prompts.html">M6: Improve Prompts</a>
+      <a href="ai_urdu_module6/dos-donts.html">M6: Do and Don't</a>
+      <a href="ai_urdu_module6/prompt-checklist.html">M6: Prompt Checklist</a>
+      <a href="ai_urdu_module7/index.html">Module 7 Index</a>
+      <a href="ai_urdu_module7/nlp-fundamentals.html">M7: NLP Fundamentals</a>
+      <a href="ai_urdu_module7/transformer-architecture.html">M7: Transformer Architecture</a>
+      <a href="ai_urdu_module7/real-world-nlp-tasks.html">M7: Real-world NLP Tasks</a>
+      <a href="ai_urdu_module7/final-quiz.html">M7: Final Quiz</a>
         </div>
       </div>
     </details>

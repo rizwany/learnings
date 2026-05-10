@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="title desc">
+  <title id="title">NLP and Transformer Models</title>
+  <desc id="desc">Words flowing through attention blocks into a useful answer.</desc>
+  <rect width="560" height="360" rx="28" fill="#eaf1ff"/>
+  <rect x="42" y="64" width="150" height="232" rx="20" fill="#fff" stroke="#b8c8ee" stroke-width="3"/>
+  <rect x="214" y="64" width="132" height="232" rx="20" fill="#fff" stroke="#b8c8ee" stroke-width="3"/>
+  <rect x="368" y="64" width="150" height="232" rx="20" fill="#fff" stroke="#b8c8ee" stroke-width="3"/>
+  <path d="M118 108h-44M160 150H74M146 192H74M174 234H74" stroke="#1d4ed8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="280" cy="126" r="25" fill="#0f766e"/>
+  <circle cx="252" cy="190" r="20" fill="#1d4ed8"/>
+  <circle cx="310" cy="220" r="22" fill="#b7791f"/>
+  <path d="M280 126l-28 64M280 126l30 94M252 190l58 30" stroke="#9fb4db" stroke-width="6" stroke-linecap="round"/>
+  <path d="M192 180h34M346 180h34" stroke="#1d4ed8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M218 164l20 16-20 16M372 164l20 16-20 16" fill="none" stroke="#1d4ed8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M404 122h78M404 160h54M404 198h82M404 236h64" stroke="#0f766e" stroke-width="13" stroke-linecap="round"/>
+  <path d="M410 270l18 16 48-54" fill="none" stroke="#177245" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
